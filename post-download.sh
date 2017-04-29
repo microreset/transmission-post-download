@@ -5,7 +5,7 @@ CONFIGFILE="post-download.conf"
 if [ -f $CONFIGFILE ]
 then
   . $CONFIGFILE
-  echo 
+  echo
 else
   echo "Config file $CONFIGFILE not found"
   exit -1
@@ -13,8 +13,8 @@ fi
 
 if [ -f $REMOTEBIN ]
 then
-  REMOTE="$REMOTEBIN -n $LOGIN:$PASSWORD"
-  echo 
+  REMOTE="$REMOTEBIN -n $USER:$PASSWORD"
+  echo
 else
   echo "$REMOTEBIN not found"
   exit -1
@@ -27,7 +27,7 @@ fi
 
 TORRENT_NAME=$TR_TORRENT_NAME
 echo `date` " Processing: " $TORRENT_NAME >> $LOG;
- 
+
 if [ $# -gt 0 ]
 then
         # Option -i? (Interactif)
